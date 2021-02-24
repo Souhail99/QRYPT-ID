@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QryptIdApp.MainPage">
+
+    <StackLayout Spacing="10" >
+
+        <Label HeightRequest="110"  
+                          HorizontalOptions="FillAndExpand" 
+                          Text="QRYPT'ID" 
+                          
+                          TextColor="DarkBlue" 
+                          FontSize="40" 
+                          HorizontalTextAlignment="Center"
+                          VerticalTextAlignment="Center"/>
+
+        <Entry  x:Name="emailEntry"
+                         Margin="20,40,20,0" 
+                         HeightRequest="50" 
+                         Placeholder="Email"
+                         >
+            
+        </Entry>
+
+        <Entry x:Name="pwEntry"
+                        Margin="20,0,20,0" 
+                        HeightRequest="50" IsPassword="true"
+                        Placeholder="Password"
+                         >
+            
+        </Entry>
+
+        <Button Margin="20,0,20,0" 
+                         HeightRequest="50" 
+                         TextColor="White" 
+                         Text="Login"  
+                         Clicked= "Button_Clicked"
+                         HorizontalOptions="FillAndExpand"/>
+        <Label x:Name="ErrorMessage" Text="" TextColor= "red"/>
+
+        
+    </StackLayout>
+
+</ContentPage>
