@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QryptIdApp.LoginPage"
+             BackgroundColor="#00376C"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HeightRequest="110"  
+                          HorizontalOptions="FillAndExpand" 
+                          FontFamily="arl"
+                          Text="Bonjour," 
+                          Margin="20,40,20,0" 
+                          TextColor="White" 
+                          FontSize="25" 
+                          HorizontalTextAlignment="Center"
+                          VerticalTextAlignment="Center"/>
+            <Label  
+                          x:Name="name"
+                          HorizontalOptions="FillAndExpand" 
+                          FontFamily="arl"
+                          Margin="20,0,20,0" 
+                          TextColor="White" 
+                          FontSize="18" 
+                          HorizontalTextAlignment="Center"
+                          VerticalTextAlignment="Center"/>
+            <Button Text="AFFICHER MA QRYPT'ID" Clicked="OnClick"
+                    BackgroundColor="#18B08F"
+                    TextColor="White"
+                    FontFamily="arl"
+                    Margin="50,40,50,0" 
+                    CornerRadius="25"/>
+
+            <Image Source="logoAppj.jpg"
+               Margin="20,195,20,0" 
+               WidthRequest="30"
+               HeightRequest="55"
+                   />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

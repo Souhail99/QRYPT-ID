@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QryptIdApp.MainPage"
+             BackgroundColor="#00376C">
+
+    <StackLayout Spacing="10" >
+        
+
+        <Label HeightRequest="110"  
+                          HorizontalOptions="FillAndExpand" 
+                          FontFamily="arl"
+                          Text="Bienvenue" 
+                          Margin="20,40,20,0" 
+                          TextColor="White" 
+                          FontSize="25" 
+                          HorizontalTextAlignment="Center"
+                          VerticalTextAlignment="Center"/>
+
+        <Entry  x:Name="emailEntry"
+                         Margin="20,15,20,0" 
+                         HeightRequest="50" 
+                         Placeholder="Identifiant"
+                PlaceholderColor="White"
+                        TextColor="White"
+                FontSize="15"
+                         >
+            
+        </Entry>
+
+        <Entry x:Name="pwEntry"
+                        Margin="20,0,20,0" 
+                        HeightRequest="50" IsPassword="true"
+                        Placeholder="Mot de passe"
+                        PlaceholderColor="White"
+                        TextColor="White"
+               FontSize="15"
+                         >
+            
+        </Entry>
+
+        <Button Margin="20,10,20,0" 
+                         HeightRequest="50" 
+                         TextColor="White" 
+                        
+                         FontFamily="arl"
+                         Text="Connexion"  
+                         Clicked= "Button_Clicked"
+                         HorizontalOptions="FillAndExpand"
+                BackgroundColor="#18B08F"
+                CornerRadius="25"/>
+        
+        <Label x:Name="ErrorMessage" Text="" TextColor= "red"/>
+        <Image Source="logoAppj.jpg"
+               Margin="20,80,20,0" 
+               WidthRequest="30"
+               HeightRequest="55"/>
+
+
+    </StackLayout>
+
+</ContentPage>

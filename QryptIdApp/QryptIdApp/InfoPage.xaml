@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QryptIdApp.InfoPage"
+             BackgroundColor="#00376C">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label x:Name="mycode" Text="" TextColor="White" HorizontalOptions="Center" FontFamily="arl" FontSize="18" Margin="0,40,0,0"/>
+
+            <Image x:Name="IdPhoto" HeightRequest="150" WidthRequest="150" Margin="0,10,0,0"/>
+            <Label x:Name="NomPrenom" Text="" TextColor="White" HorizontalOptions="Center" FontFamily="arl"/>
+            <Label x:Name="Birthday" Text="" TextColor="White" HorizontalOptions="Center" FontFamily="arl"/>
+            <Label x:Name="Taille" Text="" TextColor="White" HorizontalOptions="Center" FontFamily="arl"/>
+            <Label x:Name="Sexe" Text="" TextColor="White" HorizontalOptions="Center" FontFamily="arl"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
