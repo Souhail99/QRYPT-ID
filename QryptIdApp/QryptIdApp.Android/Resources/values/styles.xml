@@ -15,5 +15,7 @@
          which is used to tint widgets -->
     <!--<item name="colorAccent">#FF4081</item>-->
     <item name="android:statusBarColor">#00264b</item>
+    <item name="colorControlNormal">@android:color/white</item>
+    <item name="colorAccent">#18B08F</item>"
   </style>
 </resources>

@@ -25,7 +25,7 @@ namespace QryptIdApp
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(user.Id.ToString(), QRCodeGenerator.ECCLevel.Q);
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(App.UserRepo.Encrypt(user), QRCodeGenerator.ECCLevel.Q);
             PngByteQRCode qRCode = new PngByteQRCode(qrCodeData);
             byte[] qrCodeBytes = qRCode.GetGraphic(20);
             QRCodeImage.Source = ImageSource.FromStream(() => new MemoryStream(qrCodeBytes));

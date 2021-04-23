@@ -4,16 +4,28 @@
              x:Class="QryptIdApp.InfoPage"
              BackgroundColor="#00376C">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label x:Name="mycode" Text="" TextColor="White" HorizontalOptions="Center" FontFamily="arl" FontSize="18" Margin="0,30,0,0"/>
+                <Image x:Name="IdPhoto" Margin="0,10,0,0" HorizontalOptions="Center"/>
+                <Label x:Name="NomPrenom" Text="" TextColor="White" HorizontalOptions="Center" FontFamily="arl"/>
+                <Label x:Name="Birthday" Text="" TextColor="White" HorizontalOptions="Center" FontFamily="arl"/>
+                <Label x:Name="Taille" Text="" TextColor="White" HorizontalOptions="Center" FontFamily="arl"/>
+                <Label x:Name="Sexe" Text="" TextColor="White" HorizontalOptions="Center" FontFamily="arl"/>
+                <Label x:Name="ErrorMessage" Text="" TextColor= "red" HorizontalTextAlignment="Center" Margin="5,0,5,0" FontSize="Medium" FontFamily="arl"/>
+                <Button x:Name="Button1" Text="         Scanner         " Clicked="Button_Clicked" HorizontalOptions="Center" Margin="0,0,0,10"  BackgroundColor="#18B08F" TextColor="White" FontFamily="arl" CornerRadius="25"/>
 
-            <Label x:Name="mycode" Text="" TextColor="White" HorizontalOptions="Center" FontFamily="arl" FontSize="18" Margin="0,40,0,0"/>
-
-            <Image x:Name="IdPhoto" HeightRequest="150" WidthRequest="150" Margin="0,10,0,0"/>
-            <Label x:Name="NomPrenom" Text="" TextColor="White" HorizontalOptions="Center" FontFamily="arl"/>
-            <Label x:Name="Birthday" Text="" TextColor="White" HorizontalOptions="Center" FontFamily="arl"/>
-            <Label x:Name="Taille" Text="" TextColor="White" HorizontalOptions="Center" FontFamily="arl"/>
-            <Label x:Name="Sexe" Text="" TextColor="White" HorizontalOptions="Center" FontFamily="arl"/>
-            
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <!-- Juste pour avoir le bouton en bas de la page -->
+            </StackLayout>
+            <StackLayout VerticalOptions="End">
+                <Image Source="logoAppj.jpg"
+               WidthRequest="30"
+               HeightRequest="55"
+                       Margin="50"
+                          />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

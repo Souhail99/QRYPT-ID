@@ -16982,6 +16982,9 @@ namespace QryptIdApp.Droid
 			// aapt resource value: 0x7F070094
 			public const int vincent = 2131165332;
 			
+			// aapt resource value: 0x7F070095
+			public const int warning = 2131165333;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QryptIdApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,13 +14,14 @@ namespace QryptIdApp
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ScanPage : ContentPage
 	{
-		public ScanPage()
+		User _user;
+		public ScanPage(User user)
 		{
 			InitializeComponent();
 			NavigationPage.SetHasNavigationBar(this, false);
 			Button1.IsVisible = true;
+			_user = user;
 		}
-
 		private async void Button_Clicked(object sender, EventArgs e)
 		{
 			var scan = new ZXingScannerPage();
@@ -31,7 +33,14 @@ namespace QryptIdApp
 				  Device.BeginInvokeOnMainThread(async () =>
 				  {
 					  string stringResult = result.Text;
-					  //here goes rsa encryption
+                      try
+					  {
+						  stringResult = App.UserRepo.Decrypt(stringResult, _user);
+					  }
+                      catch(Exception ex)
+                      {
+						  stringResult = "erreur";
+                      }
 					  await Navigation.PushAsync(new InfoPage(stringResult));
 				  });
 			  };

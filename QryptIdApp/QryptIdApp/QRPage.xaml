@@ -4,20 +4,32 @@
              x:Class="QryptIdApp.QRPage"
              BackgroundColor="#00376C">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand">
 
-
-            <Grid>
-                <Image x:Name="QRCodeImage"
+            <Label Text=""  Margin="40"/>
+            <StackLayout VerticalOptions="FillAndExpand" >
+                <StackLayout VerticalOptions="CenterAndExpand" Margin="20">
+                    <Image x:Name="QRCodeImage"
+                           VerticalOptions="Center"
+                           
                   />
+
+
+                </StackLayout>
+            </StackLayout>
+                
+
+            <StackLayout VerticalOptions="End">
                 <Image Source="logoAppj.jpg"
-               Margin="20,485,20,0" 
                WidthRequest="30"
-               HeightRequest="55"/>
-            </Grid>
-            
-            
-            
+               HeightRequest="55"
+                       Margin="50"
+                          />
+            </StackLayout>
+
+
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZXing.Net.Mobile.Forms;
 
 namespace QryptIdApp
 {
@@ -16,6 +17,7 @@ namespace QryptIdApp
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            bool done = false;
             for (int i = 0; i < App.UserRepo.GetUsers().Count(); i++)
             {
 
@@ -27,11 +29,38 @@ namespace QryptIdApp
                     Taille.Text = "Taille: " + App.UserRepo.GetUsers()[i].Taille + " cm";
                     Sexe.Text = "Sexe: " + App.UserRepo.GetUsers()[i].Sexe;
                     IdPhoto.Source = App.UserRepo.GetUsers()[i].Photo;
+                    IdPhoto.HeightRequest = 200;
+                    IdPhoto.WidthRequest = 200;
+                    done = true;
                     break;
 
                 }
 
             }
+			if (!done)
+            {
+                mycode.Text = "Erreur";
+                Sexe.Text = "Aucune CNI ne correspond à ce QR code";
+
+                IdPhoto.Source = "warning.png";
+                    // ErrorMessage.Text = "Aucune carte d'identité ne correspond à ce QR code";
+            }
+		}
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            var scan = new ZXingScannerPage();
+            scan.BackgroundColor = Color.FromHex("#00376C");
+            //NavigationPage.SetHasNavigationBar(scan, false);
+            await Navigation.PopAsync();
+            /*scan.OnScanResult += (result) =>
+            {
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    string stringResult = result.Text;
+                    await Navigation.PushAsync(new InfoPage(stringResult));
+                });
+            };*/
         }
     }
 }

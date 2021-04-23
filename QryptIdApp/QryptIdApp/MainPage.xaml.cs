@@ -12,12 +12,12 @@ namespace QryptIdApp
 {
     public partial class MainPage : ContentPage
     {
-
+        
         public MainPage()
         {
+            
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-
         }
         public async void Button_Clicked(object sender, EventArgs e)
         {
@@ -26,18 +26,22 @@ namespace QryptIdApp
             {
                 if (user.IsAdmin == true)
                 {
-                    var scanPage = new ScanPage();
+                    var scanPage = new ScanPage(user);
                     await Navigation.PushAsync(scanPage);
+                    ErrorMessage.Text = "";
+                    pwEntry.Text = "";
                 }
                 else
                 {
                     var loginPage = new LoginPage(user);
+                    ErrorMessage.Text = "";
+                    pwEntry.Text = "";
                     await Navigation.PushAsync(loginPage);
                 }
             }
             else
             {
-                ErrorMessage.Text = "Error";
+                ErrorMessage.Text = "Identifiant ou mot de passe incorrect";
 
             }
             

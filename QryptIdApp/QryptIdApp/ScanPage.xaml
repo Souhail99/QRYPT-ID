@@ -5,30 +5,37 @@
              BackgroundColor="#00376C"
              >
     <ContentPage.Content>
-        <StackLayout>
-            <Label HeightRequest="110"  
+        <StackLayout VerticalOptions="FillAndExpand">
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label 
                           HorizontalOptions="FillAndExpand" 
                           FontFamily="arl"
-                          Text="Administrateur n°67478" 
-                          Margin="20,40,20,0" 
+                          Text="Admin n°67478" 
                           TextColor="White" 
                           FontSize="25" 
                           HorizontalTextAlignment="Center"
                           VerticalTextAlignment="Center"/>
-            <Label  
+                <Label  
+                          Margin="20"
                           HorizontalOptions="FillAndExpand" 
                           FontFamily="arl"
-                          Text="Commissariat de Police - 75017" 
-                          Margin="20,0,20,0" 
+                          Text="Commissariat de Police - 75017"  
                           TextColor="White" 
                           FontSize="18" 
                           HorizontalTextAlignment="Center"
                           VerticalTextAlignment="Center"/>
-            <Button x:Name="Button1" Text="     Scanner     " Clicked="Button_Clicked" HorizontalOptions="Center"  Margin="50,40,50,0"  BackgroundColor="#18B08F" TextColor="White" FontFamily="arl" CornerRadius="25"/>
-            <Image Source="logoAppj.jpg"
-               Margin="20,195,20,0" 
+                <Button x:Name="Button1" Text="         Scanner         " Clicked="Button_Clicked" HorizontalOptions="Center"  Margin="50,40,50,0"  BackgroundColor="#18B08F" TextColor="White" FontFamily="arl" CornerRadius="25"/>
+            </StackLayout>
+
+         
+           
+            
+            <StackLayout VerticalOptions="End">
+                <Image Source="logoAppj.jpg"
+               Margin="50" 
                WidthRequest="30"
                HeightRequest="55"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

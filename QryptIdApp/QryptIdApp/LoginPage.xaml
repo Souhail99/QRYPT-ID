@@ -5,37 +5,45 @@
              BackgroundColor="#00376C"
              >
     <ContentPage.Content>
-        <StackLayout>
-            <Label HeightRequest="110"  
-                          HorizontalOptions="FillAndExpand" 
+        <StackLayout VerticalOptions="FillAndExpand">
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label   
+                          HorizontalOptions="CenterAndExpand" 
                           FontFamily="arl"
                           Text="Bonjour," 
-                          Margin="20,40,20,0" 
                           TextColor="White" 
                           FontSize="25" 
                           HorizontalTextAlignment="Center"
                           VerticalTextAlignment="Center"/>
-            <Label  
+                <Label  
                           x:Name="name"
                           HorizontalOptions="FillAndExpand" 
                           FontFamily="arl"
-                          Margin="20,0,20,0" 
+                          Margin="10" 
                           TextColor="White" 
                           FontSize="18" 
                           HorizontalTextAlignment="Center"
                           VerticalTextAlignment="Center"/>
-            <Button Text="AFFICHER MA QRYPT'ID" Clicked="OnClick"
+                <Button Text="AFFICHER MA QRYPT'ID" Clicked="OnClick"
                     BackgroundColor="#18B08F"
                     TextColor="White"
                     FontFamily="arl"
                     Margin="50,40,50,0" 
-                    CornerRadius="25"/>
+                    CornerRadius="25"
+                        HeightRequest="50"/>
 
-            <Image Source="logoAppj.jpg"
-               Margin="20,195,20,0" 
+            </StackLayout>
+            
+            <StackLayout VerticalOptions="End">
+                <Image Source="logoAppj.jpg"
+               Margin="50" 
                WidthRequest="30"
                HeightRequest="55"
                    />
+            </StackLayout>
+
+
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

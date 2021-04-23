@@ -4,20 +4,19 @@
              x:Class="QryptIdApp.MainPage"
              BackgroundColor="#00376C">
 
-    <StackLayout Spacing="10" >
-        
-
-        <Label HeightRequest="110"  
-                          HorizontalOptions="FillAndExpand" 
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label        HorizontalOptions="CenterAndExpand" 
+                          Margin="10"
                           FontFamily="arl"
                           Text="Bienvenue" 
-                          Margin="20,40,20,0" 
                           TextColor="White" 
                           FontSize="25" 
-                          HorizontalTextAlignment="Center"
-                          VerticalTextAlignment="Center"/>
-
-        <Entry  x:Name="emailEntry"
+                          HorizontalTextAlignment="Center"/>
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand">
+                
+            <Entry  x:Name="emailEntry"
                          Margin="20,15,20,0" 
                          HeightRequest="50" 
                          Placeholder="Identifiant"
@@ -28,35 +27,39 @@
             
         </Entry>
 
-        <Entry x:Name="pwEntry"
+            <Entry x:Name="pwEntry"
                         Margin="20,0,20,0" 
                         HeightRequest="50" IsPassword="true"
                         Placeholder="Mot de passe"
                         PlaceholderColor="White"
                         TextColor="White"
-               FontSize="15"
-                         >
-            
-        </Entry>
+                        Opacity="1"
+               FontSize="15">
+
+            </Entry>
 
         <Button Margin="20,10,20,0" 
                          HeightRequest="50" 
                          TextColor="White" 
-                        
+                         
                          FontFamily="arl"
                          Text="Connexion"  
                          Clicked= "Button_Clicked"
                          HorizontalOptions="FillAndExpand"
                 BackgroundColor="#18B08F"
                 CornerRadius="25"/>
-        
-        <Label x:Name="ErrorMessage" Text="" TextColor= "red"/>
-        <Image Source="logoAppj.jpg"
-               Margin="20,80,20,0" 
-               WidthRequest="30"
-               HeightRequest="55"/>
 
+            <Label x:Name="ErrorMessage" Text="" TextColor= "white" HorizontalTextAlignment="Center" FontFamily="arl" FontSize="12" />
+        </StackLayout>
+
+        <StackLayout VerticalOptions="End">
+            <Image Source="logoAppj.jpg"
+               WidthRequest="30"
+               HeightRequest="55"
+               Margin=" 50" />
+        </StackLayout>
 
     </StackLayout>
+   
 
 </ContentPage>
